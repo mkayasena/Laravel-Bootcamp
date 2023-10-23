@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('admin.app'); //admin klasörünün içindeki app'i aç
+    return view('admin.index'); //admin klasörünün içindeki app'i aç
 })->middleware(['auth'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
