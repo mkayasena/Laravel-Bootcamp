@@ -565,7 +565,7 @@
                         <span class="nav-link-icon">
                             <i class="bi bi-bar-chart"></i>
                         </span>
-                        <span>Dashboard</span>
+                        <span>Anasayfa</span>
                     </a>
                 </li>
                 <li>
