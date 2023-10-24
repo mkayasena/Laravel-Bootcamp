@@ -1,5 +1,5 @@
 <footer class="content-footer">
-    <div>© 2021 Vetra - <a href="https://laborasyon.com/" target="_blank">Laborasyon</a></div>
+    <div>Copyright © Designed &amp; Developed by - <a href="https://www.linkedin.com/in/sena-kaya-7b81931b9/" target="_blank">Sena Kaya</a> 2023</div>
     <div>
         <nav class="nav gap-4">
             <a href="https://themeforest.net/licenses/standard" class="nav-link">Licenses</a>

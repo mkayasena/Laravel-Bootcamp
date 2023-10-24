@@ -20,72 +20,7 @@
                 <span>Anasayfa</span>
             </a>
         </li>
-        <li>
-            <a href="#">
-                <span class="nav-link-icon">
-                    <i class="bi bi-receipt"></i>
-                </span>
-                <span>Orders</span>
-            </a>
-            <ul>
-                <li>
-                    <a href="orders.html">List</a>
-                </li>
-                <li>
-                    <a href="order-detail.html">Detail</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">
-                <span class="nav-link-icon">
-                    <i class="bi bi-truck"></i>
-                </span>
-                <span>Products</span>
-            </a>
-            <ul>
-                <li>
-                    <a href="product-list.html">List
-                        View</a>
-                </li>
-                <li>
-                    <a href="product-grid.html">Grid
-                        View</a>
-                </li>
-                <li>
-                    <a href="product-detail.html">Product Detail</a>
-                </li>
-                <li>
-                    <a href="shopping-cart.html">Shopping
-                        Cart</a>
-                </li>
-                <li>
-                    <a href="checkout.html">Checkout</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">
-                <span class="nav-link-icon">
-                    <i class="bi bi-wallet2"></i>
-                </span>
-                <span>Buyer</span>
-            </a>
-            <ul>
-                <li>
-                    <a href="buyer-dashboard.html">Dashboard</a>
-                </li>
-                <li>
-                    <a href="buyer-orders.html">Orders</a>
-                </li>
-                <li>
-                    <a href="buyer-addresses.html">Addresses</a>
-                </li>
-                <li>
-                    <a href="buyer-wishlist.html">Wishlist</a>
-                </li>
-            </ul>
-        </li>
+        {{-- bi bi-receipt bi bi-wallet2 bi bi-bar-chart bi bi-paperclip bi bi-chat-square bi bi-envelope bi bi-check-circle--}}
         <li>
             <a href="customers.html">
                 <span class="nav-link-icon">
@@ -107,61 +42,6 @@
                 </li>
                 <li>
                     <a href="invoice-detail.html">Detail</a>
-                </li>
-            </ul>
-        </li>
-        <li class="menu-divider">Apps</li>
-        <li>
-            <a href="chats.html">
-                <span class="nav-link-icon">
-                    <i class="bi bi-chat-square"></i>
-                </span>
-                <span>Chats</span>
-                <span class="badge bg-success rounded-circle ms-auto">2</span>
-            </a>
-        </li>
-        <li>
-            <a href="email.html">
-                <span class="nav-link-icon">
-                    <i class="bi bi-envelope"></i>
-                </span>
-                <span>Email</span>
-            </a>
-            <ul>
-                <li>
-                    <a href="email.html">
-                        <span>Inbox</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="email-detail.html">
-                        <span>Detail</span>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" href="email-template.html">
-                        <span>Email Template</span>
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="todo-list.html">
-                <span class="nav-link-icon">
-                    <i class="bi bi-check-circle"></i>
-                </span>
-                <span>Todo App</span>
-            </a>
-            <ul>
-                <li>
-                    <a href="todo-list.html">
-                        <span>List</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="todo-detail.html">
-                        <span>Details</span>
-                    </a>
                 </li>
             </ul>
         </li>
@@ -244,23 +124,6 @@
                     <i class="bi bi-gear"></i>
                 </span>
                 <span>Settings</span>
-            </a>
-        </li>
-        <li>
-            <a href="pricing-table.html">
-                <span class="nav-link-icon">
-                    <i class="bi bi-wallet2"></i>
-                </span>
-                <span>Pricing Table</span>
-                <span class="badge bg-success ms-auto">New</span>
-            </a>
-        </li>
-        <li>
-            <a href="search-page.html">
-                <span class="nav-link-icon">
-                    <i class="bi bi-search"></i>
-                </span>
-                <span>Search Page</span>
             </a>
         </li>
         <li>
@@ -481,68 +344,7 @@
                 </li>
             </ul>
         </li>
-        <li>
-            <a href="#">
-                <span class="nav-link-icon">
-                    <i class="bi bi-bar-chart"></i>
-                </span>
-                <span>Charts</span>
-            </a>
-            <ul>
-                <li>
-                    <a href="apexchart.html">Apex Chart</a>
-                </li>
-                <li>
-                    <a href="chartjs.html">Chartjs</a>
-                </li>
-                <li>
-                    <a href="justgage.html">Justgage</a>
-                </li>
-                <li>
-                    <a href="morsis.html">Morsis</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">
-                <span class="nav-link-icon">
-                    <i class="bi bi-paperclip"></i>
-                </span>
-                <span>Extensions</span>
-            </a>
-            <ul>
-                <li>
-                    <a href="vector-map.html">
-                        <span>Vector Map</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="datatable.html">
-                        <span>Datatable</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="sweet-alert.html">Sweet Alert</a>
-                </li>
-                <li>
-                    <a href="lightbox.html">Lightbox</a>
-                </li>
-                <li>
-                    <a href="introjs.html">Introjs</a>
-                </li>
-                <li>
-                    <a href="nestable.html">Nestable</a>
-                </li>
-                <li>
-                    <a href="rating.html">Rating</a>
-                </li>
-                <li>
-                    <a href="code-highlighter.html">Code Highlighter</a>
-                </li>
-            </ul>
-        </li>
-        <li class="menu-divider">Other</li>
-        <li>
+        {{-- <li>
             <a href="#">
                 <span class="nav-link-icon">
                     <i class="bi bi-list"></i>
@@ -563,7 +365,7 @@
                     </ul>
                 </li>
             </ul>
-        </li>
+        </li> 
         <li>
             <a href="#" class="disabled">
                 <span class="nav-link-icon">
@@ -571,6 +373,6 @@
                 </span>
                 <span>Disabled</span>
             </a>
-        </li>
+        </li>--}}
     </ul>
 </div>

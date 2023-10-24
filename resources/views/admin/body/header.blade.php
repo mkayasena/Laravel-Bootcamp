@@ -119,7 +119,7 @@
                     <a href="#" class="dropdown-item d-flex align-items-center" data-sidebar-target="#settings">
                         <i class="bi bi-gear dropdown-item-icon"></i> Settings
                     </a>
-                    <a href="login.html" class="dropdown-item d-flex align-items-center text-danger" target="_blank">
+                    <a href="{{route('admin.logout')}}" class="dropdown-item d-flex align-items-center text-danger">
                         <i class="bi bi-box-arrow-right dropdown-item-icon"></i> Logout
                     </a>
                 </div>
