@@ -1,52 +1,94 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+<!doctype html>
+<html lang="en">
+<head>
+    {{-- CSS FILES --}}
+    <link rel="stylesheet" href="{{asset('backend/css')}}/bootstrap-docs.css" type="text/css">
+    <link rel="stylesheet" href="{{asset('backend/css')}}/prism.css">
+    <link rel="stylesheet" href="{{asset('backend/css')}}/app.min.css">
+    <link rel="stylesheet" href="{{asset('backend/css')}}/main.core.min.css">
+    {{-- CSS FILES --}}
 
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+    <meta property="og:title" content="Register - Web Yönetim Paneli">
+    <meta property="og:description" content="Görüntülemekte olduğunuz panel Web Yönetim Paneli'dir. Kullanıcı adı ve Kullanıcı Şifreniz ile kayıt olunabilir ve web sisteminiz üzerinde güncelleme, ekleme ve silme işlemlerini yapabilirsiniz.">
+
+    <title>Register - Web Yönetim Paneli</title>
+    <meta name="description" content="Görüntülemekte olduğunuz panel Web Yönetim Paneli'dir. Kullanıcı adı ve Kullanıcı Şifreniz ile kayıt olunabilir ve web sisteminiz üzerinde güncelleme, ekleme ve silme işlemlerini yapabilirsiniz.">
+<head>
+<body class="auth">
+
+    {{-- PRELOADER --}}
+    <div class="preloader">
+        <div class="preloader-icon"></div>
+    </div>
+    {{-- /PRELOADER --}}
+
+    {{-- LOGIN FORM --}}
+    <div class="form-wrapper">
+        <div class="container">
+            <div class="card" style="background: rgba(255, 255, 255, 0.6);">
+                <div class="row g-0">
+
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+
+                                <div class="logo mt-3 d-block text-center">
+                                    <img src="{{asset('backend/images/logo')}}/logo.png" alt="logo" width="100px">
+                                </div>
+
+                                <div class="my-5 d-block text-center">
+                                    <h1 class="display-8">Kayıt Ol</h1>
+                                    <p class="text-muted mt-4 login-text">Web Yönetim Paneli</p>
+                                </div>
+
+                                <form method="POST" action="{{ route('register') }}">
+                                    @csrf
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <input type="text" name="username" class="form-control text-center lowercase" autofocus="autofocus" placeholder="Name Surname *">
+                                        </div>
+                                
+                                        <div class="col-md-6 mb-3">
+                                            <input type="email" name="email" class="form-control text-center lowercase" autofocus="autofocus" placeholder="Email Address *">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <input type="password" name="password" class="form-control text-center" placeholder="Password *">
+                                        </div>
+                                
+                                        <div class="col-md-6 mb-3">
+                                            <input type="password" name="password-again" class="form-control text-center" placeholder="Password Again *">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="text-center text-lg-start">
+                                        <button type="submit" name="login" id="login-button" class="btn btn-primary" style="width: 100%;">Kayıt ol</button>
+                                    </div>
+                                
+                                    <ul class="list-inline text-center mt-4">
+                                        <li class="list-inline-item">Already have an account? <a href="" class="text-red"><b>Sign in</b></a></li>
+                                    </ul>
+                                </form>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
+    </div>
+    {{-- /LOGIN FORM --}}
 
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+    {{-- JS FILES --}}
+    <script src="{{asset('backend/vendor')}}/bundle.js"></script>
+    <script src="{{asset('backend/js')}}/prism.js"></script>
+    <script src="{{asset('backend/js')}}/app.min.js"></script>
+    <script src="{{asset('backend/js')}}/main.core.min.js"></script>
+    {{-- /JS FILES --}}
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="ml-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+</body>
+</html>
