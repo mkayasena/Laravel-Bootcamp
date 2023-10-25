@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 Route::controller(AdminController::class)->group(function(){
+    Route::get('/admin/profile', 'Profile')->name('admin.profile');
     Route::get('/admin/logout', 'destroy')->name('admin.logout');
 });
 

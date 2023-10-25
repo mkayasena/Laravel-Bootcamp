@@ -110,14 +110,11 @@
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-md dropdown-menu-end p-0" style="inset: 0px auto auto 0px; transform: translate(79px, 63px);" data-popper-placement="bottom-end">
-                    <a href="#" class="dropdown-item d-flex align-items-center">
+                    <a href="{{route('admin.profile')}}" class="dropdown-item d-flex align-items-center">
                         <i class="bi bi-person dropdown-item-icon"></i> Profile
                     </a>
                     <a href="#" class="dropdown-item d-flex align-items-center">
                         <i class="bi bi-envelope dropdown-item-icon"></i> Inbox
-                    </a>
-                    <a href="#" class="dropdown-item d-flex align-items-center" data-sidebar-target="#settings">
-                        <i class="bi bi-gear dropdown-item-icon"></i> Settings
                     </a>
                     <a href="{{route('admin.logout')}}" class="dropdown-item d-flex align-items-center text-danger">
                         <i class="bi bi-box-arrow-right dropdown-item-icon"></i> Logout

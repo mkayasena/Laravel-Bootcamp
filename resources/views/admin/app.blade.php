@@ -28,7 +28,7 @@
     <meta property="og:title" content="laravel">
     <meta property="og:description" content="laravel bootcamp">
 
-    <title> Vetra | Dashboard Template </title>
+    <title> Home | Web Management Panel </title>
     <meta name="description" content="laravel bootcamp">
 </head>
 
