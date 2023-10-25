@@ -56,22 +56,28 @@
 
                                 <form method="POST" action="{{route('register')}}">
                                     @csrf
+
+                                    <div class="mb-3">
+                                        <input type="email" name="email" id="email" class="form-control text-center" autofocus="autofocus" placeholder="Email Address *" required autofocus>
+                                    </div>
+
                                     <div class="row">
-                                        <div class="mb-3">
+                                        <div class="col-md-6 mb-3">
                                             <input type="text" name="name" id="name" class="form-control text-center text-capitalize" autofocus="autofocus" placeholder="Name Surname *" required autofocus>
                                         </div>
-                                
-                                        <div class="mb-3">
-                                            <input type="email" name="email" id="email" class="form-control text-center" autofocus="autofocus" placeholder="Email Address *" required autofocus>
+
+                                        <div class="col-md-6 mb-3">
+                                            <input type="text" name="username" id="username" class="form-control text-center" autofocus="autofocus" placeholder="Username *" required autofocus>
                                         </div>
+
                                     </div>
                                 
                                     <div class="row">
-                                        <div class="mb-3">
+                                        <div class="col-md-6 mb-3">
                                             <input type="password" name="password" id="password" class="form-control text-center" placeholder="Password *" required autofocus>
                                         </div>
                                 
-                                        <div class="mb-3">
+                                        <div class="col-md-6 mb-3">
                                             <input type="password" name="password_confirmation" id="password_confirmation" class="form-control text-center" placeholder="Confirm Password *" required autofocus>
                                         </div>
                                     </div>

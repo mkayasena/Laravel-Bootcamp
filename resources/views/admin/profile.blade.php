@@ -1,7 +1,7 @@
 @extends('admin.app')
 @section('admin')
 
-<div class="row row-cols-1 row-cols-md-2 g-4">
+{{-- <div class="row row-cols-1 row-cols-md-2 g-4">
 
     <div class="col-xl-4">
       <div class="card">
@@ -17,6 +17,23 @@
       </div>
     </div>
 
+</div> --}}
+
+<div class="profile-cover bg-image mb-4" style="background: url(../{{asset('backend/images/profile-bg.jpg')}});">
+  <div class="container d-flex align-items-center justify-content-center h-100 flex-column flex-md-row text-center text-md-start">
+      <div class="avatar avatar-xl me-3">
+          <img src="{{asset('backend/images/profile')}}/profile.jpg" class="rounded-circle" alt="...">
+      </div>
+      <div class="my-4 my-md-0">
+          <h3 class="mb-1">Timotheus Bendan</h3>
+          <small>Accountant</small>
+      </div>
+      <div class="ms-md-auto">
+          <a href="settings.html" class="btn btn-primary btn-lg btn-icon">
+              <i class="bi bi-pencil small"></i> Edit Profile
+          </a>
+      </div>
+  </div>
 </div>
 
 @endsection
