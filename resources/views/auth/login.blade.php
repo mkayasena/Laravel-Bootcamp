@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="{{asset('backend/css')}}/main.core.min.css">
     {{-- CSS FILES --}}
 
+    {{--  JQUERY JS LIBRARY --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    {{--  /JQUERY JS LIBRARY --}}
+
     <meta property="og:title" content="Login - Web Management Panel">
     <meta property="og:description" content="Görüntülemekte olduğunuz panel Web Management Panel'dir. Kullanıcı adı ve Kullanıcı Şifreniz ile giriş yapılabilir ve web sisteminiz üzerinde güncelleme, ekleme ve silme işlemlerini yapabilirsiniz.">
 
@@ -94,10 +98,36 @@
     {{-- /LOGIN FORM --}}
 
     {{-- JS FILES --}}
+    <script src="{{asset('backend/js')}}/main.core.min.js"></script>
     <script src="{{asset('backend/vendor')}}/bundle.js"></script>
     <script src="{{asset('backend/js')}}/prism.js"></script>
     <script src="{{asset('backend/js')}}/app.min.js"></script>
-    <script src="{{asset('backend/js')}}/main.core.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        @if(Session::has('message'))
+        var type="{{Session::get('alert-type','info')}}"
+        switch (type)
+        {
+            case 'info':
+                toastr.info("{{Session::get('message')}}");
+                break;
+    
+            case 'success':
+                toastr.success("{{Session::get('message')}}");
+                break;
+    
+            case 'warning':
+                toastr.warning("{{Session::get('message')}}");
+                break;
+    
+            case 'error':
+                toastr.error("{{Session::get('message')}}");
+                break;
+        }
+        @endif
+
+    </script>
     {{-- /JS FILES --}}
 
 </body>

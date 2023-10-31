@@ -19,6 +19,8 @@
     {{-- CSS FILES --}}
     <link rel="stylesheet" href="{{asset('backend/css')}}/app.min.css">
     <link rel="stylesheet" href="{{asset('backend/css')}}/main.core.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" type="text/css"/>
     {{-- CSS FILES --}}
 
     <meta property="og:title" content="Register - Web Management Panel">
@@ -35,7 +37,7 @@
     </div>
     {{-- /PRELOADER --}}
 
-    {{-- LOGIN FORM --}}
+    {{-- REGISTER FORM --}}
     <div class="form-wrapper">
         <div class="container">
             <div class="card" style="background: rgba(255, 255, 255, 0.6);">
@@ -100,13 +102,39 @@
             </div>
         </div>
     </div>
-    {{-- /LOGIN FORM --}}
+    {{-- /REGISTER FORM --}}
 
     {{-- JS FILES --}}
+    <script src="{{asset('backend/js')}}/main.core.min.js"></script>
     <script src="{{asset('backend/vendor')}}/bundle.js"></script>
     <script src="{{asset('backend/js')}}/prism.js"></script>
     <script src="{{asset('backend/js')}}/app.min.js"></script>
-    <script src="{{asset('backend/js')}}/main.core.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        @if(Session::has('message'))
+        var type="{{Session::get('alert-type','info')}}"
+        switch (type)
+        {
+            case 'info':
+                toastr.info("{{Session::get('message')}}");
+                break;
+    
+            case 'success':
+                toastr.success("{{Session::get('message')}}");
+                break;
+    
+            case 'warning':
+                toastr.warning("{{Session::get('message')}}");
+                break;
+    
+            case 'error':
+                toastr.error("{{Session::get('message')}}");
+                break;
+        }
+        @endif
+
+    </script>
     {{-- /JS FILES --}}
 
 </body>

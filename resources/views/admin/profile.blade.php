@@ -19,17 +19,25 @@
 
 </div> --}}
 
-<div class="profile-cover bg-image mb-4" style="background: url(../{{asset('backend/images/profile-bg.jpg')}});">
+<div class="row page-titles">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active"><a href="javascript:void(0)">App /</a></li>
+    <li class="breadcrumb-item"><a href="javascript:void(0)">Profile</a></li>
+  </ol>
+</div>
+
+<div class="profile-cover bg-image mb-4">
   <div class="container d-flex align-items-center justify-content-center h-100 flex-column flex-md-row text-center text-md-start">
       <div class="avatar avatar-xl me-3">
-          <img src="{{asset('backend/images/profile')}}/profile.jpg" class="rounded-circle" alt="...">
+          <img src="{{ (!empty($adminData->profile_image)?url('upload/user_images/'.$adminData->profile_image):url('upload/no_image.jpg')) }}" class="rounded-circle" alt="profileImage">
       </div>
-      <div class="my-4 my-md-0">
-          <h3 class="mb-1">Timotheus Bendan</h3>
-          <small>Accountant</small>
+      <div class="d-flex flex-column my-4 my-md-0">
+          <h3 class="mb-1 text-capitalize">{{$adminData->name}}</h3>
+          <small>Full Stack Web Developer</small>
+          <small>{{$adminData->email}}</small>
       </div>
       <div class="ms-md-auto">
-          <a href="settings.html" class="btn btn-primary btn-lg btn-icon">
+          <a href="{{route('edit.profile')}}" class="btn btn-primary btn-lg btn-icon">
               <i class="bi bi-pencil small"></i> Edit Profile
           </a>
       </div>

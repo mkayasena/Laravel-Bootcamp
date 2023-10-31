@@ -1,3 +1,7 @@
+@php
+    $data = App\Models\User::find(Auth::user()->id);
+@endphp
+
 <div class="header">
     <div class="menu-toggle-btn">
         <!-- Menu close button for mobile devices -->
@@ -10,7 +14,15 @@
         <img width="100" src="{{asset('backend/images/logo')}}/logo.png" alt="logo">
     </a>
     <!-- ./ Logo -->
-    <div class="page-title">Overview</div>
+    <div class="header-bar ms-auto">
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item ms-3" style="margin-right: 25px;">
+                <a href="javascript:void(0);" name="close-menu" id="close-menu" class="btn btn-danger btn-icon" style="width: 100%;">
+                    <i class="bi bi-arrow-left" id="arrow-button" style="margin-right: -1px;"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
     <form class="search-form">
         <div class="input-group">
             <button class="btn btn-outline-light" type="button" id="button-addon1">
@@ -106,7 +118,7 @@
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link nav-link-notify" data-bs-toggle="dropdown">
                     <div class="avatar me-3">
-                        <img src="http://127.0.0.1:8000/backend/images/user/man_avatar3.jpg" class="rounded-circle" alt="image">
+                        <img src="{{ (!empty($data->profile_image)?url('upload/user_images/'.$data->profile_image):url('upload/no_image.jpg')) }}" width="100px" class="rounded-circle" alt="profileImage">
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-md dropdown-menu-end p-0" style="inset: 0px auto auto 0px; transform: translate(79px, 63px);" data-popper-placement="bottom-end">
