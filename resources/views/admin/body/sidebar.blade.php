@@ -32,16 +32,18 @@
         <li>
             <a href="#">
                 <span class="nav-link-icon">
-                    <i class="bi bi-receipt"></i>
+                    <i class="bi bi-file-earmark"></i>
                 </span>
-                <span>Invoices</span>
+                <span>Home Slider</span>
             </a>
             <ul>
                 <li>
-                    <a href="invoices.html">List</a>
-                </li>
-                <li>
-                    <a href="invoice-detail.html">Detail</a>
+                    <a href="{{route('home.slide')}}">
+                        <span class="nav-link-icon">
+                            <i class="bi bi-dot"></i>
+                        </span>
+                        <span>Slider Setup</span>
+                    </a>
                 </li>
             </ul>
         </li>

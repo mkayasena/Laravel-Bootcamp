@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{asset('backend/css')}}/bootstrap-docs.css" type="text/css">
     <link rel="stylesheet" href="{{asset('backend/vendor')}}/slick/slick.css" type="text/css">
     <link rel="stylesheet" href="{{asset('backend/css')}}/app.min.css" type="text/css">
+    <link rel="stylesheet" href="{{asset('backend/css')}}/main.core.min.css" type="text/css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" type="text/css"/>
 
