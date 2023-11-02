@@ -12,16 +12,19 @@
         <div class="card">
             <div class="card-body">
 
-                <form method="POST" enctype="multipart/form-data">
+                <form method="POST" action="{{route('upload.slide')}}" enctype="multipart/form-data">
                     @csrf
+
+                    <input type="hidden" name="id" value="{{$homeSlider->id}}">
+
                     <div class="d-flex mb-4">
                         <h6 class="card-title mb-0">Slider Image</h6>
                     </div>
 
                     <div class="col-md-12 mb-3 form__img">
-                        <label for="form__img-upload">Slider Image</label>
-                        <input type="file" id="form__img-upload" name="image" class="form-control" accept=".png, .jpg, .jpeg" value="{{$homeSlider->image}}">
-                        <img src="{{ (!empty($homeSlider->image)?url('upload/home_slider/'.$homeSlider->image):url('upload/noimage.jpg')) }}" class="rounded-pill" alt="image"  width="100px">
+                        <label for="image"></label>
+                        <input type="file" id="image" name="image" class="form-control" onchange="showImage()">
+                        <img src="{{ (!empty($homeSlider->image)?url('upload/home_slider/'.$homeSlider->image):url('upload/noimage.jpg')) }}" id="previewImage" class="rounded-pill" alt="image">
                     </div>
 
                     <div class="col-md-12 mb-3">
@@ -37,10 +40,8 @@
                         <input type="text" name="button_url" id="button_url" value="{{$homeSlider->button_url}}" class="form-control">
                     </div>
 
-                    <input type="hidden" name="user_id" id="user_id" class="form-control" value="1">
-
                     <div class="col-md-12 d-grid mb-3">
-                        <button type="button" name="add-slider-button" id="add-slider-button" class="btn btn-primary">Update Slider</button>
+                        <button type="submit" class="btn btn-primary">Update Slider</button>
                     </div>
 
                 </form>
