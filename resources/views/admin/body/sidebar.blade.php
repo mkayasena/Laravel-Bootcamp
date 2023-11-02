@@ -46,6 +46,14 @@
                         <span>Hakkımızda</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{route('about.multi.image')}}">
+                        <span class="nav-link-icon">
+                            <i class="bi bi-dot"></i>
+                        </span>
+                        <span>About Multi Images</span>
+                    </a>
+                </li>
             </ul>
         </li>
         <li>

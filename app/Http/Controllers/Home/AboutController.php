@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\About;
+use App\Models\MultiImage;
 use Intervention\Image\Facades\Image;
 
 class AboutController extends Controller
@@ -56,4 +57,36 @@ class AboutController extends Controller
             return Redirect()->back()->with($notification);
         }
     }
+    public function HomeAbout()
+    {
+        $aboutPage = About::find(1);
+        return view('frontend.about', compact('aboutPage'));
+    }
+    public function AboutMultiImage()
+    {
+        return view('admin.about_page.about_multi_image');
+    } 
+    public function StoreMultiImage(Request $request)
+    {
+        $image = $request->file('multi_image');
+        foreach($image as $multi_img)
+        {
+            $name_gen = hexdec(uniqid()).'.'. $multi_img->getClientOriginalExtension();
+            Image::make($multi_img)->resize(220,220)->save('upload/multi_image/'.$name_gen);
+
+            $save_url = 'upload/multi_image/'.$name_gen;
+
+            MultiImage::insert([
+                'multi_image'=> $save_url,
+                'created_at' => now(),
+            ]);
+
+            $notification = array(
+                'message' => 'About Multi Image Inserted Succesfully',
+                'alert-type' => 'success',
+            );
+
+            return Redirect()->back()->with($notification);
+        }
+    } 
 }
