@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\HomeSlide;
-use Illuminate\Support\Facades\Redirect;
 use Intervention\Image\Facades\Image;
 
 class HomeSlideController extends Controller
@@ -24,7 +23,7 @@ class HomeSlideController extends Controller
             $name_gen = hexdec(uniqid()).'.'. $image->getClientOriginalExtension();
             Image::make($image)->resize(500,600)->save('upload/home_slider/'.$name_gen);
 
-            $save_url = $name_gen;
+            $save_url = 'upload/home_slider/'.$name_gen;
 
             HomeSlide::findOrfail($slide_id)->update([
                 'title'=> $request->title,

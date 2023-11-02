@@ -11,30 +11,23 @@
         </a>
     </div> --}}
     <ul class="mt-4">
-        <li class="menu-divider">E-Commerce</li>
+        <li class="menu-divider">Kullanıcı Menüsü</li>
+        {{-- bi bi-receipt bi bi-wallet2 bi bi-paperclip bi bi-chat-square bi bi-envelope bi bi-check-circle--}}
         <li>
-            <a class="active" href="index.html">
+            <a href="#" class="active">
                 <span class="nav-link-icon">
-                    <i class="bi bi-bar-chart"></i>
+                    <i class="bi bi-house"></i>
                 </span>
                 <span>Anasayfa</span>
             </a>
         </li>
-        {{-- bi bi-receipt bi bi-wallet2 bi bi-bar-chart bi bi-paperclip bi bi-chat-square bi bi-envelope bi bi-check-circle--}}
-        <li>
-            <a href="customers.html">
-                <span class="nav-link-icon">
-                    <i class="bi bi-person-badge"></i>
-                </span>
-                <span>Customers</span>
-            </a>
-        </li>
+        <li class="menu-divider">Sayfa Yönetimi</li>
         <li>
             <a href="#">
                 <span class="nav-link-icon">
-                    <i class="bi bi-file-earmark"></i>
+                    <i class="bi bi-bar-chart"></i>
                 </span>
-                <span>Home Slider</span>
+                <span>Anasayfa İşlemleri</span>
             </a>
             <ul>
                 <li>
@@ -42,10 +35,26 @@
                         <span class="nav-link-icon">
                             <i class="bi bi-dot"></i>
                         </span>
-                        <span>Slider Setup</span>
+                        <span>Anasayfa</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('about.page')}}">
+                        <span class="nav-link-icon">
+                            <i class="bi bi-dot"></i>
+                        </span>
+                        <span>Hakkımızda</span>
                     </a>
                 </li>
             </ul>
+        </li>
+        <li>
+            <a href="customers.html">
+                <span class="nav-link-icon">
+                    <i class="bi bi-person-badge"></i>
+                </span>
+                <span>Customers</span>
+            </a>
         </li>
         <li class="menu-divider">Pages</li>
         <li>

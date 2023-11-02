@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\HomeSlideController;
+use App\Http\Controllers\Home\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,11 @@ Route::controller(AdminController::class)->group(function(){
 Route::controller(HomeSlideController::class)->group(function(){
     Route::get('/home/slide', 'HomeSlide')->name('home.slide');
     Route::post('/upload/slide', 'UploadSlide')->name('upload.slide');
+});
+
+//About Page Controller Route
+Route::controller(AboutController::class)->group(function(){
+    Route::get('/about/page', 'AboutPage')->name('about.page');
 });
 
 Route::get('/dashboard', function () {
