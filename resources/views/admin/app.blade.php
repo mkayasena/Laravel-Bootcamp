@@ -31,12 +31,13 @@
 
     {{--  JQUERY JS LIBRARY --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{{asset('backend/vendor')}}/ckeditor/ckeditor.js"></script>
     {{--  /JQUERY JS LIBRARY --}}
 
     <meta property="og:title" content="laravel">
     <meta property="og:description" content="laravel bootcamp">
 
-    <title> Home | Web Management Panel </title>
+    <title> Web Management Panel </title>
     <meta name="description" content="laravel bootcamp">
 </head>
 

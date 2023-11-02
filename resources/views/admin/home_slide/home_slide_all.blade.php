@@ -4,7 +4,7 @@
 <div class="content">
     <div class="row">
         <div class="alert alert-danger" role="alert">
-            <h4 class="alert-heading">Update Slider</h4>
+            <h4 class="alert-heading">Update Home Page</h4>
             <hr>
             <p class="mb-0">You can update the slider on your web system using the form below.</p>
         </div>
@@ -23,8 +23,8 @@
 
                     <div class="col-md-12 mb-3 form__img">
                         <label for="image"></label>
-                        <input type="file" id="image" name="image" class="form-control" onchange="showImage()">
-                        <img src="{{ (!empty($homeSlider->image)?url('upload/home_slider/'.$homeSlider->image):url('upload/noimage.jpg')) }}" id="previewImage" class="rounded-pill" alt="image">
+                        <input type="file" id="image" name="image" class="form-control">
+                        <img src="{{ (!empty($homeSlider->image)?url($homeSlider->image):url('upload/noimage.jpg')) }}" class="rounded-pill" alt="image">
                     </div>
 
                     <div class="col-md-12 mb-3">
